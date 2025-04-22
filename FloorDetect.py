@@ -22,8 +22,8 @@ def hsv_threshold(frame):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
     # Define range for floor color in HSV (example for light grey)
-    lower_floor = np.array([0, 0, 100])  # Adjust based on your floor color
-    upper_floor = np.array([180, 50, 255])
+    lower_floor = np.array([95, 40, 120])
+    upper_floor = np.array([115, 110, 200])
     
     mask = cv2.inRange(hsv, lower_floor, upper_floor)
     return mask
